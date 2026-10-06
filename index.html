@@ -3,10 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlashLink Pro | Premium Crypto Guest Posts & Social Growth</title>
+
+    <!-- Primary SEO Meta Tags -->
+    <title>LinkAtlas | High Authority Backlinks & Instant Social Growth</title>
+    <meta name="description" content="LinkAtlas delivers premium crypto guest posts on CoinDesk, Cointelegraph & Decrypt, plus instant social growth for YouTube, Instagram, TikTok & more. Pay with crypto. Start from $3.">
+    <meta name="keywords" content="crypto guest post, high DA backlinks, crypto SEO, social media boost, YouTube views, Instagram followers, Telegram members, TikTok likes, Web3 marketing">
+    <meta name="author" content="LinkAtlas">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://linkatlas.site/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://linkatlas.site/">
+    <meta property="og:title" content="LinkAtlas | High Authority Backlinks & Instant Social Growth">
+    <meta property="og:description" content="Premium crypto guest posts on CoinDesk, Cointelegraph & Decrypt. Instant social growth for YouTube, IG, TikTok. Crypto payments accepted.">
+    <meta property="og:site_name" content="LinkAtlas">
+    <meta property="og:image" content="https://linkatlas.site/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LinkAtlas | High Authority Backlinks & Instant Social Growth">
+    <meta name="twitter:description" content="Premium crypto guest posts + instant social growth. Pay with crypto from $3.">
+    <meta name="twitter:image" content="https://linkatlas.site/og-image.jpg">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Favicon placeholder (replace with actual favicon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233b82f6'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "LinkAtlas",
+      "url": "https://linkatlas.site/",
+      "logo": "https://linkatlas.site/logo.png",
+      "description": "High authority crypto guest posts and instant social media growth services.",
+      "sameAs": [],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "hello@linkatlas.site"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "SEO & Social Media Marketing",
+      "provider": {
+        "@type": "Organization",
+        "name": "LinkAtlas"
+      },
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "LinkAtlas Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "High DA Guest Post" },
+            "price": "25",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Social Boost Bundle" },
+            "price": "3",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": { "@type": "Service", "name": "Subscribers / Followers" },
+            "price": "10",
+            "priceCurrency": "USD"
+          }
+        ]
+      }
+    }
+    </script>
+
     <style>
         :root {
             --primary: #3b82f6;
@@ -56,6 +143,9 @@
             font-weight: 700;
             color: var(--primary);
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .logo span { color: var(--text-light); }
@@ -83,6 +173,7 @@
             background: linear-gradient(to right, #60a5fa, #34d399);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
@@ -354,10 +445,11 @@
             padding: 6px 0;
             font-size: 0.85rem;
             border-bottom: 1px dashed var(--border);
+            gap: 10px;
         }
         .summary-line:last-child { border-bottom: none; }
-        .summary-line span:first-child { color: var(--text-gray); }
-        .summary-line span:last-child { color: var(--text-light); font-weight: 600; }
+        .summary-line span:first-child { color: var(--text-gray); flex-shrink: 0; }
+        .summary-line span:last-child { color: var(--text-light); font-weight: 600; text-align: right; word-break: break-word; }
 
         .summary-box {
             background: var(--bg-dark);
@@ -390,6 +482,12 @@
             color: var(--text-gray);
             font-size: 0.9rem;
         }
+        footer .footer-tagline {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        footer .footer-brand { color: var(--primary); font-weight: 700; }
 
         .contact-form textarea {
             width: 100%;
@@ -409,13 +507,16 @@
             .pricing-grid { grid-template-columns: 1fr; }
             .feed-item { flex-direction: column; align-items: flex-start; gap: 10px; }
             .status-badge { align-self: flex-start; }
+            .nav-links a { margin-left: 12px; font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo" onclick="window.scrollTo(0,0)"><i class="fas fa-bolt"></i> Flash<span>Link</span></div>
+        <div class="logo" onclick="window.scrollTo(0,0)">
+            <i class="fas fa-map-marked-alt"></i> Link<span>Atlas</span>
+        </div>
         <nav class="nav-links">
             <a onclick="scrollToSection('services')">Services</a>
             <a onclick="scrollToSection('live-feed')">Live Orders</a>
@@ -425,7 +526,7 @@
 
     <section class="hero">
         <h1>High Authority Backlinks &<br>Instant Social Growth</h1>
-        <p>Get your link on CoinDesk, Cointelegraph, and more. Or boost your social presence with the cheapest rates in the market.</p>
+        <p>Featured on CoinDesk, Cointelegraph & Decrypt — or grow your socials from just $3. Crypto payments accepted. Instant delivery.</p>
         <div class="trust-badges">
             <span class="trust-badge"><i class="fas fa-check-circle"></i> Instant Delivery</span>
             <span class="trust-badge"><i class="fas fa-shield-alt"></i> Safe & Dofollow</span>
@@ -514,11 +615,9 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
             
-            <!-- Step 1: Order Details -->
             <div id="step1" class="step-container active">
                 <h3 style="margin-bottom:20px;" id="step1Title">Order Details</h3>
 
-                <!-- Guest Post Form -->
                 <div id="form-guest-post" class="service-form" style="display:none;">
                     <div class="form-group">
                         <label>Choose Partner Site *</label>
@@ -547,7 +646,6 @@
                     </div>
                 </div>
 
-                <!-- Social Boost Form -->
                 <div id="form-social-bundle" class="service-form" style="display:none;">
                     <div class="form-group">
                         <label>Category *</label>
@@ -586,7 +684,6 @@
                     </div>
                 </div>
 
-                <!-- Subscribers Form -->
                 <div id="form-subscribers" class="service-form" style="display:none;">
                     <div class="form-group">
                         <label>Category *</label>
@@ -625,7 +722,6 @@
                     </div>
                 </div>
 
-                <!-- Live order summary (step 1) -->
                 <div class="amount-box" id="step1AmountBox" style="display:none;">
                     <div class="amount-label">Total Amount Due</div>
                     <div class="amount-value" id="step1Amount">$0.00</div>
@@ -634,7 +730,6 @@
                 <button class="btn-next" onclick="goToStep(2)">Proceed to Payment</button>
             </div>
 
-            <!-- Step 2: Payment -->
             <div id="step2" class="step-container">
                 <h3 style="margin-bottom:20px;">Send Payment</h3>
 
@@ -677,7 +772,6 @@
                 <button class="btn-next" style="background:var(--secondary);" onclick="goToStep(3)">I Have Sent The Payment</button>
             </div>
 
-            <!-- Step 3: Confirmation -->
             <div id="step3" class="step-container">
                 <div style="text-align:center;">
                     <i class="fas fa-check-circle" style="font-size:3rem; color:var(--secondary); margin-bottom:20px;"></i>
@@ -720,7 +814,8 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 FlashLink Pro. All rights reserved.</p>
+        <p><span class="footer-brand">LinkAtlas</span> &copy; 2026. All rights reserved.</p>
+        <p class="footer-tagline">High Authority Backlinks &amp; Instant Social Growth</p>
         <p style="font-size:0.8rem; margin-top:10px;">Not affiliated with CoinDesk, Cointelegraph, or Facebook.</p>
     </footer>
 
@@ -732,11 +827,10 @@
             SOL: "AbGUCCZCLYyHwRNK6RsnnNrT5xTooYNbmdyNTnzE4iVn"
         };
 
-        // Pricing per unit
         const UNIT_PRICE = {
-            'guest-post': 25,     // $25 per post
-            'social-bundle': 3,   // $3 per 1000
-            'subscribers': 10     // $10 per 1000
+            'guest-post': 25,
+            'social-bundle': 3,
+            'subscribers': 10
         };
 
         let currentSelection = 'guest-post';
@@ -748,7 +842,6 @@
         function openCheckout(serviceId) {
             currentSelection = serviceId;
             resetModal();
-            // Show correct form
             document.querySelectorAll('.service-form').forEach(f => f.style.display = 'none');
             document.getElementById('form-' + serviceId).style.display = 'block';
             document.getElementById('step1Title').innerText =
@@ -766,46 +859,33 @@
         function resetModal() {
             document.querySelectorAll('.step-container').forEach(s => s.classList.remove('active'));
             document.getElementById('step1').classList.add('active');
-            // Reset all inputs
             document.querySelectorAll('.service-form input, .service-form select').forEach(el => {
-                if (el.type === 'number') el.value = '';
-                else el.value = '';
+                el.value = '';
             });
+            document.getElementById('gp_qty').value = '1';
             document.getElementById('step1AmountBox').style.display = 'none';
             document.getElementById('step1Amount').innerText = '$0.00';
             document.getElementById('txHash').value = '';
             document.getElementById('cryptoSelect').value = 'TRX';
         }
 
-        // Calculate total based on current selection + user input
         function calculateTotal() {
             let total = 0;
-            let units = 0;
-            let unitLabel = '';
-
             if (currentSelection === 'guest-post') {
                 const qty = parseInt(document.getElementById('gp_qty').value) || 0;
                 total = qty * UNIT_PRICE['guest-post'];
-                units = qty;
-                unitLabel = qty === 1 ? 'post' : 'posts';
             } else if (currentSelection === 'social-bundle') {
                 const qty = parseInt(document.getElementById('sb_qty').value) || 0;
                 total = (qty / 1000) * UNIT_PRICE['social-bundle'];
-                units = qty;
-                unitLabel = 'units';
             } else if (currentSelection === 'subscribers') {
                 const qty = parseInt(document.getElementById('sub_qty').value) || 0;
                 total = (qty / 1000) * UNIT_PRICE['subscribers'];
-                units = qty;
-                unitLabel = 'units';
             }
-
-            return { total, units, unitLabel };
+            return { total };
         }
 
-        // Update step 1 amount preview live
         function updateOrderSummary() {
-            const { total, units } = calculateTotal();
+            const { total } = calculateTotal();
             const box = document.getElementById('step1AmountBox');
             const amt = document.getElementById('step1Amount');
             if (total > 0) {
@@ -816,7 +896,6 @@
             }
         }
 
-        // Validate inputs based on current selection
         function validateInputs() {
             if (currentSelection === 'guest-post') {
                 const site = document.getElementById('gp_site').value;
@@ -853,39 +932,27 @@
             return null;
         }
 
-        // Build order summary lines for step 2
         function buildSummary() {
             const lines = [];
             if (currentSelection === 'guest-post') {
-                const site = document.getElementById('gp_site').value;
-                const link = document.getElementById('gp_link').value.trim();
-                const qty = parseInt(document.getElementById('gp_qty').value) || 0;
                 lines.push(['Service', 'High DA Guest Post']);
-                lines.push(['Partner Site', site]);
-                lines.push(['Website URL', link]);
-                lines.push(['Posts', qty]);
+                lines.push(['Partner Site', document.getElementById('gp_site').value]);
+                lines.push(['Website URL', document.getElementById('gp_link').value.trim()]);
+                lines.push(['Posts', document.getElementById('gp_qty').value]);
                 lines.push(['Rate', '$25.00 / post']);
             } else if (currentSelection === 'social-bundle') {
-                const cat = document.getElementById('sb_category').value;
-                const svc = document.getElementById('sb_service').value;
-                const qty = parseInt(document.getElementById('sb_qty').value) || 0;
-                const link = document.getElementById('sb_link').value.trim();
                 lines.push(['Service', 'Social Boost Bundle']);
-                lines.push(['Category', cat]);
-                lines.push(['Service Type', svc]);
-                lines.push(['Link', link]);
-                lines.push(['Quantity', qty.toLocaleString()]);
+                lines.push(['Category', document.getElementById('sb_category').value]);
+                lines.push(['Service Type', document.getElementById('sb_service').value]);
+                lines.push(['Link', document.getElementById('sb_link').value.trim()]);
+                lines.push(['Quantity', parseInt(document.getElementById('sb_qty').value).toLocaleString()]);
                 lines.push(['Rate', '$3.00 / 1000']);
             } else if (currentSelection === 'subscribers') {
-                const cat = document.getElementById('sub_category').value;
-                const svc = document.getElementById('sub_service').value;
-                const qty = parseInt(document.getElementById('sub_qty').value) || 0;
-                const link = document.getElementById('sub_link').value.trim();
                 lines.push(['Service', 'Subscribers / Followers']);
-                lines.push(['Category', cat]);
-                lines.push(['Service Type', svc]);
-                lines.push(['Link', link]);
-                lines.push(['Quantity', qty.toLocaleString()]);
+                lines.push(['Category', document.getElementById('sub_category').value]);
+                lines.push(['Service Type', document.getElementById('sub_service').value]);
+                lines.push(['Link', document.getElementById('sub_link').value.trim()]);
+                lines.push(['Quantity', parseInt(document.getElementById('sub_qty').value).toLocaleString()]);
                 lines.push(['Rate', '$10.00 / 1000']);
             }
             return lines;
@@ -894,25 +961,17 @@
         function goToStep(step) {
             if (step === 2) {
                 const err = validateInputs();
-                if (err) {
-                    alert(err);
-                    return;
-                }
+                if (err) { alert(err); return; }
             }
-
             if (step === 3) {
                 const tx = document.getElementById('txHash').value.trim();
-                if (!tx) {
-                    alert('Please enter your Transaction Hash ID before proceeding.');
-                    return;
-                }
+                if (!tx) { alert('Please enter your Transaction Hash ID before proceeding.'); return; }
             }
 
             document.querySelectorAll('.step-container').forEach(s => s.classList.remove('active'));
             document.getElementById(`step${step}`).classList.add('active');
 
             if (step === 2) {
-                // Build summary + amount
                 const lines = buildSummary();
                 let html = '';
                 lines.forEach(([k, v]) => {
@@ -978,9 +1037,7 @@
         }
 
         window.onclick = function(event) {
-            if (event.target == document.getElementById('paymentModal')) {
-                closeModal();
-            }
+            if (event.target == document.getElementById('paymentModal')) closeModal();
             if (event.target == document.getElementById('contactModal')) {
                 document.getElementById('contactModal').style.display = 'none';
             }
@@ -995,7 +1052,7 @@
             { name: 'TikTok Likes', icon: 'fab fa-tiktok', price: '$3.00' }
         ];
 
-        const names = ['Alex M.', 'Neelam K.', 'John D.', 'Javed K.', 'Emma W.', 'Rohit L.', 'Chris P.', 'Nazeem J.','Deepak M.', 'Amit K.', 'Divya D.', 'Rahul S.', 'Komal W.', 'David L.', 'Chris P.', 'Lisa J.'];
+        const names = ['Alex M.', 'Sarah K.', 'John D.', 'Mike R.', 'Emma W.', 'David L.', 'Chris P.', 'Lisa J.'];
 
         function addFeedItem() {
             const randomService = services[Math.floor(Math.random() * services.length)];
