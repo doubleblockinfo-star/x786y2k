@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlashLink Pro | Premium Crypto Guest Posts & Social Growth</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -39,7 +37,6 @@
             overflow-x: hidden;
         }
 
-        /* Header */
         header {
             background: rgba(15, 23, 42, 0.95);
             padding: 1rem 5%;
@@ -74,7 +71,6 @@
 
         .nav-links a:hover { color: var(--primary); }
 
-        /* Hero Section */
         .hero {
             padding: 120px 5% 60px;
             text-align: center;
@@ -113,7 +109,6 @@
             background: rgba(30, 41, 59, 0.5);
         }
 
-        /* Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -128,7 +123,6 @@
         .section-title h2 { font-size: 2rem; margin-bottom: 10px; }
         .section-title p { color: var(--text-gray); }
 
-        /* Pricing Cards */
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -197,7 +191,6 @@
             color: white;
         }
 
-        /* Live Feed Section */
         .live-feed-section {
             background: #0b1120;
             padding: 40px 0;
@@ -248,7 +241,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Partners */
         .partners {
             display: flex;
             justify-content: center;
@@ -259,7 +251,6 @@
         }
         .partner-logo { font-weight: 700; font-size: 1.2rem; color: var(--text-gray); }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -272,6 +263,8 @@
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(8px);
+            padding: 20px;
+            overflow-y: auto;
         }
 
         .modal-content {
@@ -279,10 +272,12 @@
             padding: 30px;
             border-radius: 12px;
             width: 90%;
-            max-width: 500px;
+            max-width: 520px;
             border: 1px solid var(--border);
             position: relative;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            max-height: 90vh;
+            overflow-y: auto;
         }
 
         .close-modal {
@@ -311,8 +306,10 @@
             color: white;
             border-radius: 6px;
             outline: none;
+            font-size: 0.95rem;
         }
         .form-group input:focus, .form-group select:focus { border-color: var(--primary); }
+        .form-group input:disabled { opacity: 0.6; cursor: not-allowed; }
 
         .wallet-box {
             background: var(--bg-dark);
@@ -330,6 +327,46 @@
 
         .wallet-label { color: var(--primary); font-weight: bold; display: block; margin-bottom: 5px; }
 
+        .amount-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(16, 185, 129, 0.15));
+            border: 1px solid var(--primary);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .amount-box .amount-label {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .amount-box .amount-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 0.85rem;
+            border-bottom: 1px dashed var(--border);
+        }
+        .summary-line:last-child { border-bottom: none; }
+        .summary-line span:first-child { color: var(--text-gray); }
+        .summary-line span:last-child { color: var(--text-light); font-weight: 600; }
+
+        .summary-box {
+            background: var(--bg-dark);
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-bottom: 15px;
+        }
+
         .btn-next {
             background: var(--primary);
             color: white;
@@ -341,8 +378,10 @@
             font-size: 1rem;
             margin-top: 10px;
             font-weight: 600;
+            transition: 0.2s;
         }
         .btn-next:hover { background: var(--primary-dark); }
+        .btn-next:disabled { opacity: 0.6; cursor: not-allowed; }
 
         footer {
             text-align: center;
@@ -352,7 +391,6 @@
             font-size: 0.9rem;
         }
 
-        /* Contact Form Styles */
         .contact-form textarea {
             width: 100%;
             padding: 12px;
@@ -364,7 +402,8 @@
             min-height: 100px;
         }
 
-        /* Responsive */
+        .hint { font-size: 0.75rem; color: var(--text-gray); margin-top: 4px; }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 2rem; }
             .pricing-grid { grid-template-columns: 1fr; }
@@ -375,7 +414,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="logo" onclick="window.scrollTo(0,0)"><i class="fas fa-bolt"></i> Flash<span>Link</span></div>
         <nav class="nav-links">
@@ -385,7 +423,6 @@
         </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <h1>High Authority Backlinks &<br>Instant Social Growth</h1>
         <p>Get your link on CoinDesk, Cointelegraph, and more. Or boost your social presence with the cheapest rates in the market.</p>
@@ -396,7 +433,6 @@
         </div>
     </section>
 
-    <!-- Services / Pricing -->
     <div class="container" id="services">
         <div class="section-title">
             <h2>Choose Your Growth Package</h2>
@@ -405,11 +441,10 @@
 
         <div class="pricing-grid">
             
-            <!-- Service 1: Guest Post -->
             <div class="card">
                 <div class="card-header">
                     <h3><i class="fas fa-pen-nib"></i> High DA Guest Post</h3>
-                    <div class="price">$75 <span>/ post</span></div>
+                    <div class="price">$25 <span>/ post</span></div>
                     <ul class="features-list">
                         <li><i class="fas fa-check"></i> DA 40+ Sites Included</li>
                         <li><i class="fas fa-check"></i> Niche Relevant (Crypto/Tech)</li>
@@ -420,32 +455,30 @@
                 <button class="btn-select" onclick="openCheckout('guest-post')">Select Package</button>
             </div>
 
-            <!-- Service 2: Social Bundle -->
             <div class="card popular">
                 <div class="badge-popular">BEST VALUE</div>
                 <div class="card-header">
                     <h3><i class="fas fa-hashtag"></i> Social Boost Bundle</h3>
-                    <div class="price">$3 <span>/ 1000 Views</span></div>
+                    <div class="price">$3 <span>/ 1000</span></div>
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> YouTube / IG / FB Views</li>
-                        <li><i class="fas fa-check"></i> Real Engagement</li>
+                        <li><i class="fas fa-check"></i> Facebook, IG, Telegram, YouTube</li>
+                        <li><i class="fas fa-check"></i> Rumble & TikTok Supported</li>
+                        <li><i class="fas fa-check"></i> Views / Likes / Shares / Comments</li>
                         <li><i class="fas fa-check"></i> Start within 24 hours</li>
-                        <li><i class="fas fa-check"></i> Refill Guarantee</li>
                     </ul>
                 </div>
                 <button class="btn-select" onclick="openCheckout('social-bundle')">Select Package</button>
             </div>
 
-            <!-- Service 3: Subscriber Pack -->
             <div class="card">
                 <div class="card-header">
                     <h3><i class="fas fa-users"></i> Subscribers / Followers</h3>
-                    <div class="price">$10 <span>/ 100 Subs</span></div>
+                    <div class="price">$10 <span>/ 1000</span></div>
                     <ul class="features-list">
-                        <li><i class="fas fa-check"></i> Telegram / YT Subs</li>
-                        <li><i class="fas fa-check"></i> Gradual Delivery</li>
+                        <li><i class="fas fa-check"></i> Facebook, IG, Telegram, YouTube</li>
+                        <li><i class="fas fa-check"></i> Rumble & TikTok Supported</li>
+                        <li><i class="fas fa-check"></i> Followers / Subs / Page Likes / Members</li>
                         <li><i class="fas fa-check"></i> No Drop Guarantee</li>
-                        <li><i class="fas fa-check"></i> High Quality Profiles</li>
                     </ul>
                 </div>
                 <button class="btn-select" onclick="openCheckout('subscribers')">Select Package</button>
@@ -454,20 +487,16 @@
         </div>
     </div>
 
-    <!-- Live Purchase Feed -->
     <div class="live-feed-section" id="live-feed">
         <div class="feed-container">
             <div class="section-title" style="margin-bottom: 20px;">
                 <h2><i class="fas fa-signal"></i> Live Purchases</h2>
                 <p>Real orders happening right now</p>
             </div>
-            <div id="feed-list">
-                <!-- Items injected by JS -->
-            </div>
+            <div id="feed-list"></div>
         </div>
     </div>
 
-    <!-- Partners -->
     <div class="container" id="partners">
         <h3 style="text-align:center; margin-bottom:20px; color:var(--text-gray);">Trusted by creators publishing on:</h3>
         <div class="partners">
@@ -485,30 +514,139 @@
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
             
-            <!-- Step 1: Details -->
+            <!-- Step 1: Order Details -->
             <div id="step1" class="step-container active">
-                <h3 style="margin-bottom:20px;">Order Details</h3>
-                <div class="form-group">
-                    <label>Selected Service</label>
-                    <input type="text" id="selectedServiceDisplay" readonly value="Guest Post ($75)">
+                <h3 style="margin-bottom:20px;" id="step1Title">Order Details</h3>
+
+                <!-- Guest Post Form -->
+                <div id="form-guest-post" class="service-form" style="display:none;">
+                    <div class="form-group">
+                        <label>Choose Partner Site *</label>
+                        <select id="gp_site">
+                            <option value="">-- Select a site --</option>
+                            <option value="CoinDesk">CoinDesk</option>
+                            <option value="Cointelegraph">Cointelegraph</option>
+                            <option value="Medium">Medium</option>
+                            <option value="LinkedIn Pulse">LinkedIn Pulse</option>
+                            <option value="Decrypt">Decrypt</option>
+                            <option value="Binance Blog">Binance Blog</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Website / Link URL *</label>
+                        <input type="url" id="gp_link" placeholder="https://your-website.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address (for delivery update) *</label>
+                        <input type="email" id="gp_email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Posts *</label>
+                        <input type="number" id="gp_qty" min="1" value="1" oninput="updateOrderSummary()">
+                        <div class="hint">$25 per post</div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Your Website / Link URL</label>
-                    <input type="url" id="userLink" placeholder="https://...">
+
+                <!-- Social Boost Form -->
+                <div id="form-social-bundle" class="service-form" style="display:none;">
+                    <div class="form-group">
+                        <label>Category *</label>
+                        <select id="sb_category">
+                            <option value="">-- Select category --</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Telegram">Telegram</option>
+                            <option value="Youtube">YouTube</option>
+                            <option value="Rumble">Rumble</option>
+                            <option value="TikTok">TikTok</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Service *</label>
+                        <select id="sb_service">
+                            <option value="">-- Select service --</option>
+                            <option value="Views">Views</option>
+                            <option value="Likes">Likes</option>
+                            <option value="Share">Share</option>
+                            <option value="Comment">Comment</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity (Minimum 1000) *</label>
+                        <input type="number" id="sb_qty" min="1000" step="100" placeholder="1000" oninput="updateOrderSummary()">
+                        <div class="hint">$3 per 1000 units</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Link URL *</label>
+                        <input type="url" id="sb_link" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address (for delivery update) *</label>
+                        <input type="email" id="sb_email" placeholder="you@example.com">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Email Address (for delivery proof)</label>
-                    <input type="email" id="userEmail" placeholder="you@example.com">
+
+                <!-- Subscribers Form -->
+                <div id="form-subscribers" class="service-form" style="display:none;">
+                    <div class="form-group">
+                        <label>Category *</label>
+                        <select id="sub_category">
+                            <option value="">-- Select category --</option>
+                            <option value="Facebook">Facebook</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Telegram">Telegram</option>
+                            <option value="Youtube">YouTube</option>
+                            <option value="Rumble">Rumble</option>
+                            <option value="TikTok">TikTok</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Service *</label>
+                        <select id="sub_service">
+                            <option value="">-- Select service --</option>
+                            <option value="Followers">Followers</option>
+                            <option value="Subscribers">Subscribers</option>
+                            <option value="Page Likes">Page Likes</option>
+                            <option value="Members">Members</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity (Minimum 1000) *</label>
+                        <input type="number" id="sub_qty" min="1000" step="100" placeholder="1000" oninput="updateOrderSummary()">
+                        <div class="hint">$10 per 1000 units</div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Link URL *</label>
+                        <input type="url" id="sub_link" placeholder="https://...">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address (for delivery update) *</label>
+                        <input type="email" id="sub_email" placeholder="you@example.com">
+                    </div>
                 </div>
+
+                <!-- Live order summary (step 1) -->
+                <div class="amount-box" id="step1AmountBox" style="display:none;">
+                    <div class="amount-label">Total Amount Due</div>
+                    <div class="amount-value" id="step1Amount">$0.00</div>
+                </div>
+
                 <button class="btn-next" onclick="goToStep(2)">Proceed to Payment</button>
             </div>
 
             <!-- Step 2: Payment -->
             <div id="step2" class="step-container">
                 <h3 style="margin-bottom:20px;">Send Payment</h3>
-                <p style="font-size:0.9rem; color:var(--text-gray); margin-bottom:15px;">
-                    Send the exact amount to the wallet address below corresponding to your preferred coin.
-                </p>
+
+                <div class="summary-box" id="orderSummaryBox"></div>
+
+                <div class="amount-box">
+                    <div class="amount-label">Amount to Send</div>
+                    <div class="amount-value" id="paymentAmount">$0.00</div>
+                    <div style="font-size:0.75rem; color:var(--text-gray); margin-top:5px;">
+                        Send the exact equivalent in your chosen coin
+                    </div>
+                </div>
 
                 <div class="form-group">
                     <label>Cryptocurrency</label>
@@ -524,6 +662,12 @@
                     <span class="wallet-label">TRX Wallet:</span>
                     TMjoLHCHcQKpxgJSqp4zqzv6eU9H9pW78D
                     <div style="font-size:0.7rem; color:var(--text-gray); margin-top:5px; text-align:center;">Click to Copy</div>
+                </div>
+
+                <div class="form-group" style="margin-top:15px;">
+                    <label>Transaction Hash ID (TxID) *</label>
+                    <input type="text" id="txHash" placeholder="Paste your transaction hash here after sending">
+                    <div class="hint">Required for payment verification.</div>
                 </div>
 
                 <div style="text-align:center; margin-top:15px; font-size:0.8rem; color:var(--text-gray);">
@@ -581,7 +725,6 @@
     </footer>
 
     <script>
-        // Data Configuration
         const wallets = {
             TRX: "TMjoLHCHcQKpxgJSqp4zqzv6eU9H9pW78D",
             BTC: "bc1q7n0rpda5neshslwaecfpskff35m9v2w2t30qxc",
@@ -589,30 +732,30 @@
             SOL: "AbGUCCZCLYyHwRNK6RsnnNrT5xTooYNbmdyNTnzE4iVn"
         };
 
-        const prices = {
-            'guest-post': 75,
-            'social-bundle': 3,
-            'subscribers': 10
-        };
-
-        const serviceNames = {
-            'guest-post': 'High DA Guest Post ($75)',
-            'social-bundle': 'Social Boost Bundle ($3/1k views)',
-            'subscribers': 'Subscriber Pack ($10/100 subs)'
+        // Pricing per unit
+        const UNIT_PRICE = {
+            'guest-post': 25,     // $25 per post
+            'social-bundle': 3,   // $3 per 1000
+            'subscribers': 10     // $10 per 1000
         };
 
         let currentSelection = 'guest-post';
 
-        // Navigation Helper
         function scrollToSection(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Checkout Logic
         function openCheckout(serviceId) {
             currentSelection = serviceId;
-            document.getElementById('selectedServiceDisplay').value = serviceNames[serviceId];
             resetModal();
+            // Show correct form
+            document.querySelectorAll('.service-form').forEach(f => f.style.display = 'none');
+            document.getElementById('form-' + serviceId).style.display = 'block';
+            document.getElementById('step1Title').innerText =
+                serviceId === 'guest-post' ? 'Guest Post Order Details' :
+                serviceId === 'social-bundle' ? 'Social Boost Order Details' :
+                'Subscribers Order Details';
+            updateOrderSummary();
             document.getElementById('paymentModal').style.display = 'flex';
         }
 
@@ -623,25 +766,162 @@
         function resetModal() {
             document.querySelectorAll('.step-container').forEach(s => s.classList.remove('active'));
             document.getElementById('step1').classList.add('active');
-            document.getElementById('userLink").value = '';
-            document.getElementById('userEmail").value = '';
+            // Reset all inputs
+            document.querySelectorAll('.service-form input, .service-form select').forEach(el => {
+                if (el.type === 'number') el.value = '';
+                else el.value = '';
+            });
+            document.getElementById('step1AmountBox').style.display = 'none';
+            document.getElementById('step1Amount').innerText = '$0.00';
+            document.getElementById('txHash').value = '';
+            document.getElementById('cryptoSelect').value = 'TRX';
+        }
+
+        // Calculate total based on current selection + user input
+        function calculateTotal() {
+            let total = 0;
+            let units = 0;
+            let unitLabel = '';
+
+            if (currentSelection === 'guest-post') {
+                const qty = parseInt(document.getElementById('gp_qty').value) || 0;
+                total = qty * UNIT_PRICE['guest-post'];
+                units = qty;
+                unitLabel = qty === 1 ? 'post' : 'posts';
+            } else if (currentSelection === 'social-bundle') {
+                const qty = parseInt(document.getElementById('sb_qty').value) || 0;
+                total = (qty / 1000) * UNIT_PRICE['social-bundle'];
+                units = qty;
+                unitLabel = 'units';
+            } else if (currentSelection === 'subscribers') {
+                const qty = parseInt(document.getElementById('sub_qty').value) || 0;
+                total = (qty / 1000) * UNIT_PRICE['subscribers'];
+                units = qty;
+                unitLabel = 'units';
+            }
+
+            return { total, units, unitLabel };
+        }
+
+        // Update step 1 amount preview live
+        function updateOrderSummary() {
+            const { total, units } = calculateTotal();
+            const box = document.getElementById('step1AmountBox');
+            const amt = document.getElementById('step1Amount');
+            if (total > 0) {
+                box.style.display = 'block';
+                amt.innerText = '$' + total.toFixed(2);
+            } else {
+                box.style.display = 'none';
+            }
+        }
+
+        // Validate inputs based on current selection
+        function validateInputs() {
+            if (currentSelection === 'guest-post') {
+                const site = document.getElementById('gp_site').value;
+                const link = document.getElementById('gp_link').value.trim();
+                const email = document.getElementById('gp_email').value.trim();
+                const qty = parseInt(document.getElementById('gp_qty').value);
+                if (!site) return 'Please choose a partner site.';
+                if (!link) return 'Please enter your website/link URL.';
+                if (!email) return 'Please enter your email address.';
+                if (!qty || qty < 1) return 'Please enter a valid number of posts (min 1).';
+            } else if (currentSelection === 'social-bundle') {
+                const cat = document.getElementById('sb_category').value;
+                const svc = document.getElementById('sb_service').value;
+                const qty = parseInt(document.getElementById('sb_qty').value);
+                const link = document.getElementById('sb_link').value.trim();
+                const email = document.getElementById('sb_email').value.trim();
+                if (!cat) return 'Please choose a category.';
+                if (!svc) return 'Please choose a service.';
+                if (!qty || qty < 1000) return 'Quantity must be at least 1000.';
+                if (!link) return 'Please enter your link URL.';
+                if (!email) return 'Please enter your email address.';
+            } else if (currentSelection === 'subscribers') {
+                const cat = document.getElementById('sub_category').value;
+                const svc = document.getElementById('sub_service').value;
+                const qty = parseInt(document.getElementById('sub_qty').value);
+                const link = document.getElementById('sub_link').value.trim();
+                const email = document.getElementById('sub_email').value.trim();
+                if (!cat) return 'Please choose a category.';
+                if (!svc) return 'Please choose a service.';
+                if (!qty || qty < 1000) return 'Quantity must be at least 1000.';
+                if (!link) return 'Please enter your link URL.';
+                if (!email) return 'Please enter your email address.';
+            }
+            return null;
+        }
+
+        // Build order summary lines for step 2
+        function buildSummary() {
+            const lines = [];
+            if (currentSelection === 'guest-post') {
+                const site = document.getElementById('gp_site').value;
+                const link = document.getElementById('gp_link').value.trim();
+                const qty = parseInt(document.getElementById('gp_qty').value) || 0;
+                lines.push(['Service', 'High DA Guest Post']);
+                lines.push(['Partner Site', site]);
+                lines.push(['Website URL', link]);
+                lines.push(['Posts', qty]);
+                lines.push(['Rate', '$25.00 / post']);
+            } else if (currentSelection === 'social-bundle') {
+                const cat = document.getElementById('sb_category').value;
+                const svc = document.getElementById('sb_service').value;
+                const qty = parseInt(document.getElementById('sb_qty').value) || 0;
+                const link = document.getElementById('sb_link').value.trim();
+                lines.push(['Service', 'Social Boost Bundle']);
+                lines.push(['Category', cat]);
+                lines.push(['Service Type', svc]);
+                lines.push(['Link', link]);
+                lines.push(['Quantity', qty.toLocaleString()]);
+                lines.push(['Rate', '$3.00 / 1000']);
+            } else if (currentSelection === 'subscribers') {
+                const cat = document.getElementById('sub_category').value;
+                const svc = document.getElementById('sub_service').value;
+                const qty = parseInt(document.getElementById('sub_qty').value) || 0;
+                const link = document.getElementById('sub_link').value.trim();
+                lines.push(['Service', 'Subscribers / Followers']);
+                lines.push(['Category', cat]);
+                lines.push(['Service Type', svc]);
+                lines.push(['Link', link]);
+                lines.push(['Quantity', qty.toLocaleString()]);
+                lines.push(['Rate', '$10.00 / 1000']);
+            }
+            return lines;
         }
 
         function goToStep(step) {
-            // Validation for Step 1
             if (step === 2) {
-                const email = document.getElementById('userEmail').value;
-                const link = document.getElementById('userLink').value;
-                if (!email || !link) {
-                    alert("Please fill in both Email and Link.");
+                const err = validateInputs();
+                if (err) {
+                    alert(err);
+                    return;
+                }
+            }
+
+            if (step === 3) {
+                const tx = document.getElementById('txHash').value.trim();
+                if (!tx) {
+                    alert('Please enter your Transaction Hash ID before proceeding.');
                     return;
                 }
             }
 
             document.querySelectorAll('.step-container').forEach(s => s.classList.remove('active'));
             document.getElementById(`step${step}`).classList.add('active');
-            
-            if(step === 2) {
+
+            if (step === 2) {
+                // Build summary + amount
+                const lines = buildSummary();
+                let html = '';
+                lines.forEach(([k, v]) => {
+                    html += `<div class="summary-line"><span>${k}</span><span>${v}</span></div>`;
+                });
+                document.getElementById('orderSummaryBox').innerHTML = html;
+
+                const { total } = calculateTotal();
+                document.getElementById('paymentAmount').innerText = '$' + total.toFixed(2);
                 updateWallet();
             }
         }
@@ -666,11 +946,10 @@
             alert("Address copied to clipboard!");
         }
 
-        // Contact Modal Logic
         function openContactModal() {
             document.getElementById('contactModal').style.display = 'flex';
             document.getElementById('contactSuccess').style.display = 'none';
-            // Reset fields
+            document.querySelector('.contact-form').style.display = 'block';
             document.getElementById('contactName').value = '';
             document.getElementById('contactEmail').value = '';
             document.getElementById('contactMsg').value = '';
@@ -686,7 +965,6 @@
                 return;
             }
 
-            // Simulate sending
             const btn = document.querySelector('#contactModal .btn-next');
             btn.innerText = "Sending...";
             btn.disabled = true;
@@ -699,7 +977,6 @@
             }, 1000);
         }
 
-        // Close modal if clicking outside
         window.onclick = function(event) {
             if (event.target == document.getElementById('paymentModal')) {
                 closeModal();
@@ -714,8 +991,8 @@
         const services = [
             { name: 'YouTube Views', icon: 'fab fa-youtube', price: '$3.00' },
             { name: 'IG Followers', icon: 'fab fa-instagram', price: '$10.00' },
-            { name: 'Guest Post', icon: 'fas fa-pen-nib', price: '$75.00' },
-            { name: 'Twitter Likes', icon: 'fab fa-twitter', price: '$5.00' }
+            { name: 'Guest Post', icon: 'fas fa-pen-nib', price: '$25.00' },
+            { name: 'TikTok Likes', icon: 'fab fa-tiktok', price: '$3.00' }
         ];
 
         const names = ['Alex M.', 'Sarah K.', 'John D.', 'Mike R.', 'Emma W.', 'David L.', 'Chris P.', 'Lisa J.'];
@@ -723,7 +1000,7 @@
         function addFeedItem() {
             const randomService = services[Math.floor(Math.random() * services.length)];
             const randomName = names[Math.floor(Math.random() * names.length)];
-            const isCompleted = Math.random() > 0.3; // 70% chance completed, 30% processing
+            const isCompleted = Math.random() > 0.3;
             
             const item = document.createElement('div');
             item.className = 'feed-item';
@@ -740,19 +1017,14 @@
                 </span>
             `;
 
-            // Add to top
             feedList.insertBefore(item, feedList.firstChild);
 
-            // Keep only last 5 items
             if (feedList.children.length > 5) {
                 feedList.removeChild(feedList.lastChild);
             }
         }
 
-        // Initial load
         for(let i=0; i<3; i++) addFeedItem();
-        
-        // Add new item every 5 seconds
         setInterval(addFeedItem, 5000);
 
     </script>
